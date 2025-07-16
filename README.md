@@ -131,12 +131,7 @@ You can extend it with Manager/User roles as needed.
 ![URL\_MONITOR Screenshot](assets/screenshots/url_monitors.png)
 ![URL\_INCIDENT Screenshot](assets/screenshots/url_incident.png)
 
-> If the above images don’t load, try using raw GitHub links instead:
->
-> ```markdown
-> ![Dashboard](https://raw.githubusercontent.com/shaketshubham/Url_monitor_inte/main/assets/screenshots/url_monitors.png)
-> ![Incident](https://raw.githubusercontent.com/shaketshubham/Url_monitor_inte/main/assets/screenshots/url_incident.png)
-> ```
+
 
 ---
 
