@@ -1,0 +1,23 @@
+<!-- static/src/xml/monitor_dashboard.xml -->
+<templates xml:space="preserve">
+  <t t-name="url_monitor_integration.MonitorDashboard">
+    <div class="o_container p-4">
+      <h2>🌐 Monitoring Dashboard</h2>
+      <button class="btn btn-primary mt-3" t-on-click="fetchDashboardData">
+        🔄 Refresh
+      </button>
+
+      <div class="row mt-3">
+        <div class="col-4">
+          <strong>Total Monitors:</strong> <t t-esc="state.total_monitors"/>
+        </div>
+        <div class="col-4">
+          <strong>Down Monitors:</strong> <t t-esc="state.down_monitors"/>
+        </div>
+        <div class="col-4">
+          <strong>Uptime (24h):</strong> <t t-esc="state.uptime_24h"/>%
+        </div>
+      </div>
+    </div>
+  </t>
+</templates>

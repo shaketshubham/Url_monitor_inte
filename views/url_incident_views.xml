@@ -1,0 +1,42 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_url_incident_form" model="ir.ui.view">
+    <field name="name">url.incident.form</field>
+    <field name="model">url.incident</field>
+    <field name="arch" type="xml">
+      <form string="Incident">
+        <sheet>
+          <group>
+            <field name="monitor_id"/>
+            <field name="type"/>
+            <field name="started_at"/>
+            <field name="resolved_at"/>
+            <field name="notified"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_url_incident_tree" model="ir.ui.view">
+    <field name="name">url.incident.tree</field>
+    <field name="model">url.incident</field>
+    <field name="arch" type="xml">
+      <tree string="Incidents">
+        <field name="monitor_id"/>
+        <field name="type"/>
+        <field name="started_at"/>
+        <field name="resolved_at"/>
+        <field name="notified"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="action_url_incident" model="ir.actions.act_window">
+    <field name="name">Incidents</field>
+    <field name="res_model">url.incident</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="menu_url_incident" name="Incidents" parent="menu_url_monitor_root" action="action_url_incident"/>
+</odoo>

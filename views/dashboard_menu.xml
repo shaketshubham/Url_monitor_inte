@@ -1,0 +1,22 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- Top-level menu under your root monitor menu -->
+  <menuitem 
+      id="menu_dashboard"
+      name="Monitoring Dashboard" 
+      parent="menu_url_monitor_root" 
+      sequence="10"/>
+
+  <!-- Action to launch OWL dashboard -->
+  <record id="action_monitor_dashboard" model="ir.actions.client">
+    <field name="name">Monitoring Dashboard</field>
+    <field name="tag">url_monitor_integration.action_monitor_dashboard</field> <!-- ✅ Must match JS -->
+  </record>
+
+  <!-- Submenu that triggers the above action -->
+  <menuitem 
+      id="menu_dashboard_action"
+      name="Dashboard"
+      parent="menu_dashboard"
+      action="action_monitor_dashboard"/>
+</odoo>

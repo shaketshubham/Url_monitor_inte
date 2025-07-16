@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- FORM VIEW -->
+    <record id="view_url_monitor_form" model="ir.ui.view">
+        <field name="name">url.monitor.form</field>
+        <field name="model">url.monitor</field>
+        <field name="arch" type="xml">
+            <form string="URL Monitor">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="url"/>
+                        <field name="check_interval"/>
+                        <field name="latency_threshold"/>
+                        <field name="alert_webhook"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="last_status"/>
+                        <field name="last_latency"/>
+                        <field name="incident_count"/>
+                        <field name="user_id"/>
+                        <!-- <widget name="action_monitor_dashboard" />   -->
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- TREE VIEW -->
+    <record id="view_url_monitor_tree" model="ir.ui.view">
+        <field name="name">url.monitor.tree</field>
+        <field name="model">url.monitor</field>
+        <field name="arch" type="xml">
+            <tree string="Monitors">
+                <field name="name"/>
+                <field name="url"/>
+                <field name="last_status"/>
+                <field name="last_latency"/>
+                <field name="incident_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ACTION TO OPEN TREE/FORM VIEW -->
+    <record id="action_url_monitor" model="ir.actions.act_window">
+        <field name="name">URL Monitors</field>
+        <field name="res_model">url.monitor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- MENUS -->
+    <menuitem id="menu_url_monitor_root"
+              name="URL Monitor"
+              sequence="10"/>
+
+    <menuitem id="menu_url_monitor_main"
+              name="Monitors"
+              parent="menu_url_monitor_root"
+              action="action_url_monitor"
+              sequence="20"/>
+
+</odoo>

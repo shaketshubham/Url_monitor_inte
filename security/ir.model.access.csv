@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_url_monitor,access_url_monitor,model_url_monitor,base.group_system,1,1,1,1
+access_url_incident,access_url_incident,model_url_incident,base.group_system,1,1,1,1
+
+

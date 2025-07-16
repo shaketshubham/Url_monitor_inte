@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <!-- Cron to sync Monitors every 1 minutes -->
+  <record id="cron_sync_monitors" model="ir.cron">
+    <field name="name">Sync URL Monitors</field>
+    <field name="model_id" ref="url_monitor_integration.model_url_monitor"/>
+    <field name="state">code</field>
+    <field name="code">model.sync_monitors_from_fastapi()</field>
+    <field name="interval_number">1</field>
+    <field name="interval_type">minutes</field>
+    <field name="numbercall">-1</field> <!-- Infinite runs -->
+    <field name="active">True</field>
+  </record>
+
+  <!-- Cron to sync Incidents every 1 minutes -->
+  <record id="cron_sync_incidents" model="ir.cron">
+    <field name="name">Sync URL Incidents</field>
+    <field name="model_id" ref="url_monitor_integration.model_url_incident"/>
+    <field name="state">code</field>
+    <field name="code">model.sync_incidents_from_fastapi()</field>
+    <field name="interval_number">1</field>
+    <field name="interval_type">minutes</field>
+    <field name="numbercall">-1</field> <!-- Infinite runs -->
+    <field name="active">True</field>
+  </record>
+
+</odoo>
