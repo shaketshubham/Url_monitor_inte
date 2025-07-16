@@ -142,14 +142,5 @@ Module: `url_monitor_integration`
 Version: `1.0`
 GitHub: [shaketshubham](https://github.com/shaketshubham)
 
----
 
-## ✅ Future Improvements
-
-* [ ] Add per-user dashboard filtering
-* [ ] Slack/MS Teams webhook notification support
-* [ ] Pagination on incident list
-* [ ] Public uptime pages for each monitor
-
----
 
